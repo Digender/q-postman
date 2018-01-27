@@ -16,6 +16,7 @@ export default class LoginController {
   constructor(Auth, $state) {
     this.Auth = Auth;
     this.$state = $state;
+    if(this.Auth.isLoggedIn()) this.$state.go('main');
   }
 
   login(form) {

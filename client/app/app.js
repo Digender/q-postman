@@ -19,14 +19,19 @@ import account from './account';
 import admin from './admin';
 import navbar from '../components/navbar/navbar.component';
 import footer from '../components/footer/footer.component';
-import main from './main/main.component';
+
+import Main from './main/main.component';
+import Tester from './tester/tester.component';
+
 import constants from './app.constants';
 import util from '../components/util/util.module';
 
 import './app.scss';
 
 angular.module('qPostmanApp', [ngCookies, ngResource, ngSanitize, uiRouter, uiBootstrap, _Auth,
-  account, admin, 'validation.match', navbar, footer, main, constants, util
+  account, admin, 'validation.match', navbar, footer,
+  Main, Tester,
+  constants, util
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
